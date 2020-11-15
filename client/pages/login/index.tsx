@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Space, Row, Col, Card, Form, Input, Button, Checkbox, Alert } from 'antd';
+import { Space, Row, Col, Card, Form, Input, Button, Alert } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { gql, useMutation } from '@apollo/client';
@@ -76,9 +76,9 @@ const Login = () => {
                   <Link href="/createAccount">Create an account</Link>
                 </Col>
               </Row>
-              <a className="login-form-forgot" href="">
+              {/* <a className="login-form-forgot" href="">
                 Forgot password
-              </a>
+              </a> */}
             </Form>
           </Space>
         </Card>

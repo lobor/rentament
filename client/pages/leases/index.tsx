@@ -1,6 +1,7 @@
 import { Alert, Button, Space, Table } from 'antd';
 import Link from 'next/link';
 import { gql, useQuery } from '@apollo/client';
+import * as React from 'react';
 
 const columns = [
   {

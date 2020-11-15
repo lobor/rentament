@@ -124,6 +124,7 @@ const RegistrationForm = () => {
                       if (!value || getFieldValue('password') === value) {
                         return Promise.resolve();
                       }
+                      // eslint-disable-next-line prefer-promise-reject-errors
                       return Promise.reject('The two passwords that you entered do not match!');
                     },
                   }),
@@ -137,14 +138,13 @@ const RegistrationForm = () => {
                 rules={[
                   {
                     validator: (_, value) =>
+                      // eslint-disable-next-line prefer-promise-reject-errors
                       value ? Promise.resolve() : Promise.reject('Should accept agreement'),
                   },
                 ]}
                 {...tailFormItemLayout}
               >
-                <Checkbox>
-                  I have read the <a href="">agreement</a>
-                </Checkbox>
+                <Checkbox>I have read the agreement</Checkbox>
               </Form.Item>
               <Form.Item {...tailFormItemLayout}>
                 <Button type="primary" htmlType="submit" loading={loading}>

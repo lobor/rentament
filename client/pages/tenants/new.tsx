@@ -52,7 +52,7 @@ const NewLocataire = () => {
               <Card title="Pièce d'identité" bordered={false}>
                 <Form.Item name="idtype" label="Type">
                   <Select>
-                    <Select.Option value="id">Carte d'identité</Select.Option>
+                    <Select.Option value="id">Carte didentité</Select.Option>
                     <Select.Option value="passport">Passeport</Select.Option>
                   </Select>
                 </Form.Item>

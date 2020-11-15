@@ -44,7 +44,7 @@ const QueryLease = extendType({
   type: 'Query',
 });
 const MutationLease = extendType({
-  definition(t) {},
+  definition() {},
   type: 'Mutation',
 });
 

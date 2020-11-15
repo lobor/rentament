@@ -1,6 +1,12 @@
-import { Form, Select, Tabs, Card, Space, Input, Button, DatePicker } from 'antd';
+import { Form, Tabs, Card, Space, Input, Button, DatePicker } from 'antd';
 import * as React from 'react';
 
+const LabelSuperficie = () => (
+  <>
+    {/* eslint-disable-next-line */}
+    Superficie m<sup>2</sup>
+  </>
+);
 const NewImmeuble = () => {
   return (
     <Form
@@ -33,14 +39,7 @@ const NewImmeuble = () => {
                 </Form.Item>
               </Card>
               <Card title="Description" bordered={false}>
-                <Form.Item
-                  name="superficie"
-                  label={
-                    <>
-                      Superficie m<sup>2</sup>
-                    </>
-                  }
-                >
+                <Form.Item name="superficie" label={<LabelSuperficie />}>
                   <Input />
                 </Form.Item>
                 <Form.Item name="description" label="Description">

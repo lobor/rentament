@@ -73,7 +73,9 @@ const NewBiens = () => {
                 <Form.Item
                   name="superficie"
                   label={
+                    // eslint-disable-next-line react/jsx-wrap-multilines
                     <>
+                      {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
                       Superficie m<sup>2</sup>
                     </>
                   }

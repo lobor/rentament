@@ -46,8 +46,7 @@ const QueryTenant = extendType({
   type: 'Query',
 });
 const MutationTenant = extendType({
-  definition(t) {
-  },
+  definition() {},
   type: 'Mutation',
 });
 

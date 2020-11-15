@@ -1,15 +1,5 @@
-import {
-  Form,
-  Select,
-  Tabs,
-  Card,
-  Space,
-  Input,
-  Button,
-  DatePicker,
-  Switch,
-  Checkbox,
-} from "antd";
+import { Form, Select, Tabs, Card, Space, Input, Button, DatePicker, Switch, Checkbox } from 'antd';
+import * as React from 'react';
 
 const days = Array.from(Array(32).keys());
 days.shift();
@@ -30,7 +20,7 @@ const NewLease = () => {
               </Button>,
             ]}
           >
-            <Space direction="vertical" style={{ width: "100%" }}>
+            <Space direction="vertical" style={{ width: '100%' }}>
               <Card title="Bien loué" bordered={false}>
                 <Form.Item name="propertyId" label="Bien" required>
                   <Select>
@@ -42,12 +32,8 @@ const NewLease = () => {
               <Card title="Détails de la location" bordered={false}>
                 <Form.Item name="type" label="Type" required>
                   <Select>
-                    <Select.Option value="empty">
-                      Bail d'habitation vide
-                    </Select.Option>
-                    <Select.Option value="furniture">
-                      Bail d'habitation meublé
-                    </Select.Option>
+                    <Select.Option value="empty">Bail dhabitation vide</Select.Option>
+                    <Select.Option value="furniture">Bail dhabitation meublé</Select.Option>
                   </Select>
                 </Form.Item>
                 <Form.Item name="startedAt" label="Début du bail" required>
@@ -82,11 +68,7 @@ const NewLease = () => {
                 <Form.Item name="maintenance" label="Charges">
                   <Input prefix="€" />
                 </Form.Item>
-                <Form.Item
-                  name="monthlyAmount"
-                  label="Loyer charges comprises"
-                  required
-                >
+                <Form.Item name="monthlyAmount" label="Loyer charges comprises" required>
                   <Input prefix="€" disabled />
                 </Form.Item>
               </Card>
@@ -108,20 +90,12 @@ const NewLease = () => {
                 </Form.Item>
               </Card>
               <Card title="Dépôt de garantie" bordered={false}>
-                <Form.Item
-                  name="securityDeposit"
-                  label="Dépôt de garantie"
-                  required
-                >
+                <Form.Item name="securityDeposit" label="Dépôt de garantie" required>
                   <Input prefix="€" />
                 </Form.Item>
               </Card>
               <Card title="Allocations logement" bordered={false}>
-                <Form.Item
-                  name="paymentCafAmount"
-                  label="Paiement CAF / APL"
-                  required
-                >
+                <Form.Item name="paymentCafAmount" label="Paiement CAF / APL" required>
                   <Input prefix="€" />
                 </Form.Item>
               </Card>
@@ -141,6 +115,6 @@ const NewLease = () => {
   );
 };
 
-NewLease.title = "New lease";
+NewLease.title = 'New lease';
 
 export default NewLease;

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Grid, PageHeader, Layout, Menu, Spin, Dropdown, Avatar } from 'antd';
+import { Grid, PageHeader, Layout, Menu, Spin, Avatar } from 'antd';
 import { LogoutOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -46,8 +46,8 @@ const LayoutApp: React.FC<{ title?: string; extra?: React.ReactNode[] }> = ({
   const user = data?.user;
 
   const logout = async () => {
-    const { data } = await handleLogout();
-    if (data.logout.status === 'OK') {
+    const { data: dataLogout } = await handleLogout();
+    if (dataLogout.logout.status === 'OK') {
       // eslint-disable-next-line no-undef
       window.localStorage.clear();
       router.push('/login');
