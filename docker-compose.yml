@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  app-client:
+    container_name: app-client
+    ports:
+      - 3000:3000
+    image: node
+    working_dir: /usr/src/app
+    networks:
+      - web-rentament
+    volumes:
+      - type: bind
+        source: ./client
+        target: /usr/src/app
+    command: npm run dev
+  
+  app-server:
+    container_name: app-server
+    ports:
+      - 4000:4000
+    image: node
+    working_dir: /usr/src/app
+    networks:
+      - web-rentament
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/rentament
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/app
+    command: npx lerna exec --scope rentament-server -- npm run dev
+
+  mongo:
+    container_name: mongo-rentament
+    image: mongo
+    networks:
+      - web-rentament
+    logging:
+      driver: none
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+
+networks:
+  web-rentament:
+    external: true

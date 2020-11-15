@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,15 +16,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "typeRoots": ["server/generated"]
+    "jsx": "preserve"
   },
   "include": [
-    "client/next-env.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
   "exclude": [
-    "**/node_modules"
+    "node_modules"
   ]
 }
